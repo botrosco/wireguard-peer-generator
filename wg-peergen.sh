@@ -1,7 +1,7 @@
 # Set vars
-ip="192.168.1." #Root IP Address. Only include first 3 segments, the final one is sorted in exec.
-ext_ip="svr.rossd.net" #URL/IP for the connection to wireguard server
-port="51819" #Port for the wireguard server
+ip="192.168.2." #Root IP Address. Only include first 3 segments, the final one is sorted in exec.
+ext_ip="" #URL/IP for the connection to wireguard server
+port="55555" #Port for the wireguard server
 dns="1.1.1.1,1.0.0.1" #Comma seperated list
 
 # Sort dir stuff
@@ -10,7 +10,7 @@ cd /tmp;
 
 # Collect device configs
 read -p "Peer name: " p_name;
-read -p "Number of device (3 would be 192.168.3/32): " p_ip;
+read -p "Number of device (3 would be 192.168.2.3/32): " p_ip;
 
 # Generate keys using colleceted info
 wg genkey | sudo tee $p_name.key | wg pubkey | sudo tee $p_name.key.pub;
