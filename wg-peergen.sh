@@ -32,7 +32,7 @@ Address = $ip.$p_ip/32
 DNS = $dns
 
 [Peer]
-PublicKey = $keypubsvr
+PublicKey = $svrkeypub
 AllowedIPs = 0.0.0.0/0
 Endpoint = $ext_ip:$port" >> "$p_name.conf";
  #cat "$p_name.conf"; #For troubleshooting
