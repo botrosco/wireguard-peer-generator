@@ -3,8 +3,8 @@ ip="192.168.2" #Root IP Address. Only include first 3 segments, the final one is
 ext_ip="" #URL/IP for the connection to wireguard server
 port="55555" #Port for the wireguard server
 dns="1.1.1.1,1.0.0.1" #Comma seperated list
-svrkeypub=$(sudo cat "/etc/wireguard/server.key.pub") #Location of server public key
-svrkeypvt=$(sudo cat "/etc/wireguard/server.key") #Location of server private key
+svrkeypub=$(sudo cat "/etc/wireguard/server.key.pub") #Location of server public key, for the provided guide it would be /etc/wireguard/keys/server.key.pub
+svrkeypvt=$(sudo cat "/etc/wireguard/server.key") #Location of server private key, for the provided guide it would be /etc/wireguard/keys/server.key
 wg_clients_dir="$HOME/wg-clients/" #Location to place conf files for qr scanning at a later date
 
 # Sort dir stuff
