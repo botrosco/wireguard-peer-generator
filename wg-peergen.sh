@@ -45,7 +45,7 @@ sudo wg set wg0 peer $keypub allowed-ips $ip.$p_ip/32 &&
 qrencode -t ansiutf8 < "$p_name.conf";
 
 # Move stuff to wireguard folder
-cp -f "$p_name.conf" "$wg_clients_dirs"; #Comment out to only place in /etc/wireguard/clients
+cp -f "$p_name.conf" "$wg_clients_dir"; #Comment out to only place in /etc/wireguard/clients
 sudo mv "$p_name.conf" "$p_name.key" "$p_name.key.pub" "/etc/wireguard/clients/"; 
 
 # Return to initial dir
