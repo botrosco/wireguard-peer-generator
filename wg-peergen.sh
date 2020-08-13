@@ -5,6 +5,7 @@ port="55555" #Port for the wireguard server
 dns="1.1.1.1,1.0.0.1" #Comma seperated list
 svrkeypub=$(sudo cat "/etc/wireguard/server.key.pub") #Location of server public key
 svrkeypvt=$(sudo cat "/etc/wireguard/server.key") #Location of server private key
+wg_clients_dir="$HOME/wg-clients/" #Location to place conf files for qr scanning at a later date
 
 # Sort dir stuff
 dir=$(pwd);
@@ -44,6 +45,7 @@ sudo wg set wg0 peer $keypub allowed-ips $ip.$p_ip/32 &&
 qrencode -t ansiutf8 < "$p_name.conf";
 
 # Move stuff to wireguard folder
+cp -f "$p_name.conf" "$wg_clients_dirs"; #Comment out to only place in /etc/wireguard/clients
 sudo mv "$p_name.conf" "$p_name.key" "$p_name.key.pub" "/etc/wireguard/clients/"; 
 
 # Return to initial dir
