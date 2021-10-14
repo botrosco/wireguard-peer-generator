@@ -4,7 +4,7 @@ This script should be run on the server where wireguard is running
 ## Prerequisites
 ### Dependencies
 - wireguard (Working and configured ready to configure clients, check out [this](https://serversideup.net/how-to-set-up-wireguard-vpn-server-on-ubuntu-20-04/) guide for more)
-- qrencode
+- qrencode (If you want to be able to generate QR codes)
 ### Directories
 These are directories that are required/recommended by the script
 #### Required
@@ -14,6 +14,7 @@ These are directories that are required/recommended by the script
 
 ## Notes for running
 The inline comments should provide most of the information required.
+Updated to provide the exact information requried for the wireguard tools on OpenWRT routers
 
 *Remember to set vars before usign the script*
 
