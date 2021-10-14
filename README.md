@@ -14,6 +14,7 @@ These are directories that are required/recommended by the script
 
 ## Notes for running
 The inline comments should provide most of the information required.
+
 Updated to provide the exact information requried for the wireguard tools on OpenWRT routers
 
 *Remember to set vars before usign the script*
