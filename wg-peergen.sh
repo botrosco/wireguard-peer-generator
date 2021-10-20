@@ -64,3 +64,4 @@ cp -f "$p_name.conf" "$p_name.key" "$p_name.key.pub" "$wg_clients_dir";
 
 # Return to initial dir
 cd "$dir"
+rm -r /wg-tmp/*
